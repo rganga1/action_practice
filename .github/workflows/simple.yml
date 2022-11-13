@@ -18,4 +18,14 @@ jobs:
           print(platform)
           print(platform.processor)
         shell: python
+  windows-shell-commands:
+    runs-on: windows-latest
+    steps:
+      - name: for location
+        run: Get-Location
+      - name: location by bash
+        run: pwd
+        shell: bash
+
+    
 
