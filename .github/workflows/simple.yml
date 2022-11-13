@@ -8,3 +8,8 @@ jobs:
     steps: 
       - name: echo a string
         run: echo "Hello World"
+      - name: checks
+        run: |
+          node -v
+          npm -v
+
