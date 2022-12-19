@@ -11,6 +11,9 @@ jobs:
         run: echo "Hello World"
       - name: setup node and check node version
         run: |
+          uses: actions/setup-node@v3
+          with:
+            node-version: 16
           node -v
           npm -v
       - name: python commands
