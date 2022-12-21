@@ -34,11 +34,11 @@ jobs:
           python-version: 3.9   
       - name: python commands
         run: |
-          import platform
-          print(platform)
-          print(platform.processor)
-          python3 -v
-        shell: python
+          # import platform
+          # print(platform)
+          # print(platform.processor)
+          python3 --version
+        # shell: python
 
     
 
