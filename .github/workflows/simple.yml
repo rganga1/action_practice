@@ -37,7 +37,7 @@ jobs:
           import platform
           print(platform)
           print(platform.processor)
-          python -v
+          python3 -v
         shell: python
 
     
