@@ -1,6 +1,19 @@
 name: Shell Commands
 
-on: [push]
+on:
+  #push:
+    #branches: [ develop ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'debug'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
 
 jobs:
   run-shell-command:
@@ -16,11 +29,15 @@ jobs:
             node-version: 16
           node -v
           npm -v
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9   
       - name: python commands
         run: |
           import platform
           print(platform)
           print(platform.processor)
+          python -v
         shell: python
 
     
