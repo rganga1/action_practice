@@ -22,10 +22,10 @@ jobs:
     steps: 
       - name: echo a string
         run: echo "Hello World"
-      - name: setup node and check node version
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: setup node and check node version
         run: |
           node -v
           npm -v
